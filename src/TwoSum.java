@@ -14,16 +14,16 @@ public class TwoSum {
     private int pairs(int[] arr, int target) {
         int num = 0;
         boolean appeared;
-        for(int i = 0; i<arr.length; i++) {
+        for(int i = 0; i < arr.length; i++) {
             appeared = false;
-            for(int k = 0; k<i; k++) {
-                if(arr[k] == arr[i] || arr[k]+arr[i]==target) {
+            for(int k = 0; k < i; k++) {
+                if( arr[k] == arr[i] || arr[k] + arr[i] == target) {
                     appeared = true;
                     break;
                 }
             }
-            for(int j=i+1; !appeared && j<arr.length; j++) {
-                if(arr[i]+arr[j]==target) {
+            for(int j = i + 1; !appeared && j < arr.length; j++) {
+                if (arr[i] + arr[j] == target) {
                     num++;
                     break;
                 }
