@@ -48,3 +48,54 @@ public class MergeSorted {
         System.out.println(ms.merge(one, two));
     }
 }
+
+
+/* LeetCode Solution */
+//////(Need to do)
+/*
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) { val = x; }
+ * }
+ */
+/*
+class Solution {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        List<Integer> merged = new ArrayList<Integer>();
+        int oneIndex = 0, twoIndex = 0;
+        while(l1.next != null && l2.next != null) {
+            if(l1.next.val < l2.next.val) {
+                merged.add(l1.next.val);
+                l1 = l1.next;
+            } else {
+                merged.add(l2.next.val);
+                l2 = l2.next;
+            }
+        }
+        if(l1 == null) {
+            while(l2 != null) {
+                merged.add(l2.next.val);
+                l2 = l2.next;
+            }
+        } else if(l2 == null) {
+            while(l1 != null) {
+                merged.add(l1.next.val);
+                l1 = l1.next;
+            }
+        }
+        ListNode first = new ListNode();
+        first.val = merged.get(0).val;
+        ListNode head = new ListNode();
+        first.val = merged.get(1).val;
+        for(int i = 2; i < merged.size(); i++) {
+            ListNode nextPointer = new ListNode();
+            nextPointer.val = merged.get(i);
+            head.next = val;
+            head = head.next;
+        }
+        return head;
+    }
+}
+ */
