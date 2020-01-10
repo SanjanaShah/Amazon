@@ -30,6 +30,8 @@
  *    4
  *   / \
  *  1   2
+ *
+ * @author Sanjana Shah
  */
 
 import java.util.*;

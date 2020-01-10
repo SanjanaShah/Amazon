@@ -9,6 +9,8 @@
  * Example 2:
  * Input: "cbbd"
  * Output: "bb"
+ *
+ * @author Sanjana Shah
  */
 import java.util.*;
 public class LongestPalindrome {

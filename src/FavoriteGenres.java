@@ -37,6 +37,7 @@
  *   "Emma":  []
  * }
  *
+ * @author Sanjana Shah
  */
 
 import java.util.*;
