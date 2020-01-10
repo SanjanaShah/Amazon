@@ -48,6 +48,7 @@ public class RollDice {
                     rotations[i][j] = 1;
             }
         }
+
         int sum = 0;
         int min = 10000;
         for(int i = 0; i < input.length; i++) {
