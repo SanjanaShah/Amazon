@@ -67,6 +67,13 @@ public class SpiralMatrix {
             x += directionX;
             y += directionY;
             System.out.println(x + " " + y + " " + colsCompleted + " " + rowsCompleted);
+
+            if(y == n - colsCompleted - 1) {
+                rowsCompleted++;
+                directionX = 1;
+                directionY = 0;
+            }
+
             if(x == n - colsCompleted - 1) {
                 directionX = 0;
                 directionY = -1;
