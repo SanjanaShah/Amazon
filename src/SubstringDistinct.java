@@ -21,7 +21,7 @@ import java.util.List;
  * @author Sanjana Shah
  */
 public class SubstringDistinct {
-    public List<String> getSubstrings(String s) {
+    private List<String> getSubstrings(String s) {
         List<String> arr = new ArrayList<String>();
         char[] str = s.toCharArray();
         for(int i = 1; i <= s.length(); i++) {
