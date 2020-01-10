@@ -56,51 +56,46 @@ public class SpiralMatrix {
         int x = 0, y = 0;
         while(value <= Math.pow(n, 2)) {
             arr[x][y] = value;
-            for(int i = 0; i < n; i++){
-                for(int j = 0; j < n; j++){
-                    System.out.print(arr[i][j]);
-                }
-                System.out.println();
-            }
-            System.out.println();
             value++;
             x += directionX;
             y += directionY;
-            System.out.println(x + " " + y + " " + colsCompleted + " " + rowsCompleted);
 
-            if(y == n - colsCompleted - 1) {
+            if(y == n - rowsCompleted - 1 && directionY == 1) {
+                //System.out.println("down");
                 rowsCompleted++;
                 directionX = 1;
                 directionY = 0;
-            }
-
-            if(x == n - colsCompleted - 1) {
+            } else if(x == n - colsCompleted - 1 && directionX == 1) {
+                //System.out.println("back");
+                colsCompleted++;
                 directionX = 0;
                 directionY = -1;
-            } else if(y == n - rowsCompleted - 1) {
-                rowsCompleted++;
-                directionX = 1;
+            } else if(y == rowsCompleted - 1 && directionY == -1) {
+                //System.out.println("up");
+                //rowsCompleted++;
+                directionX = -1;
                 directionY = 0;
+            } else if(x == colsCompleted && directionX == -1) {
+                //System.out.println("forward");
+                //colsCompleted++;
+                directionX = 0;
+                directionY = 1;
             }
-//            } else if(y == n - rowsCompleted - 1) {
-//                rowsCompleted++;
-//                directionX = -1;
-//                directionY = 0;
-//            } else if(y == n - rowsCompleted - 1) {
-//                rowsCompleted++;
-//                directionX = -1;
-//                directionY = 0;
-//            }
         }
         return arr;
     }
     public static void main(String[] args) {
         SpiralMatrix sm = new SpiralMatrix();
-        int[][] a = sm.spiralFill(4);
+        int[][] a = sm.spiralFill(10);
 
-        for(int i = 0; i < 4; i++){
-            for(int j = 0; j < 4; j++){
-                System.out.print(a[i][j]);
+        for(int i = 0; i < 10; i++){
+            for(int j = 0; j < 10; j++){
+                if(a[i][j] >= 100)
+                    System.out.print(a[i][j] + " ");
+                else if(a[i][j] >= 10)
+                    System.out.print(a[i][j] + "  ");
+                else
+                    System.out.print(a[i][j] + "   ");
             }
             System.out.println();
         }
