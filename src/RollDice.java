@@ -34,6 +34,8 @@
  * Assume that:
  * • N is an integer within the range [1..100];
  * • each element of the array A is an integer within the range [1..6].
+ *
+ * @author Sanjana Shah
  */
 public class RollDice {
     private int numRotations(int[] input) {
